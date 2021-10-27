@@ -2,7 +2,7 @@
 
 ## When deep learning and web-dev come together! 
 
-This project was created by me (Eaishawarya Malviya) ([aishwarode17]("https://github.com/Aishwarode17"))
+This project was created by me (Eaishawarya Malviya) ([aishwarode17](https://github.com/Aishwarode17))
 
 view it live [here](https://aishwarode17.github.io/Robosapian/)
 
