@@ -1,0 +1,19 @@
+.smscr{
+    width:800px;    
+}
+
+.btnd{
+    /* font-size: medium; */
+    align-items: center;
+}
+
+@media screen and (max-width:400px){
+    .smscr{
+        width:100%;
+    }
+
+    .btnd{
+        font-size: small;
+        text-align: center;
+    }
+}
