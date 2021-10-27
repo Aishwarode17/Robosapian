@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Robosapian/static/css/main.6da15aed.chunk.css",
-    "main.js": "/Robosapian/static/js/main.13f223d2.chunk.js",
-    "main.js.map": "/Robosapian/static/js/main.13f223d2.chunk.js.map",
+    "main.js": "/Robosapian/static/js/main.fde17674.chunk.js",
+    "main.js.map": "/Robosapian/static/js/main.fde17674.chunk.js.map",
     "runtime-main.js": "/Robosapian/static/js/runtime-main.dd473f1e.js",
     "runtime-main.js.map": "/Robosapian/static/js/runtime-main.dd473f1e.js.map",
     "static/js/2.bba35d35.chunk.js": "/Robosapian/static/js/2.bba35d35.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.dd473f1e.js",
     "static/js/2.bba35d35.chunk.js",
     "static/css/main.6da15aed.chunk.css",
-    "static/js/main.13f223d2.chunk.js"
+    "static/js/main.fde17674.chunk.js"
   ]
 }
