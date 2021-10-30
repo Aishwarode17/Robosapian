@@ -6,8 +6,6 @@ This project was created by me (Eaishawarya Malviya) ([aishwarode17](https://git
 
 view it live [here](https://aishwarode17.github.io/Robosapian/)
 
-
-
 This is an object detection web application made with react JS , javascript, html5, css3, tachyons and tensorflow.js (for the object detection model).
 
 This detects objects (bat, ball etc), animals (including their species and scientific names) ,humans ,insects and a lot more from the url of images that it takes.
