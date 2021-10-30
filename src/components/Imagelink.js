@@ -1,20 +1,31 @@
 import React from 'react'
 import "./Imagelink.css"
 
-export default function Imagelink({typechange,press}) {
+
+export default function Imagelink({typechange,press,imghandle,placeHolder,value}) {
     return (
         <div className="">
-             <p className="f4 line ph2 ba pv1" style={{height:"180px" , overflowY:"scroll"}}>
+             <p className="f4 line ph2 ba pv1" style={{height:"145px" , overflowY:"scroll"}}>
                 {"This is an object detection app."}
-                {"Please enter the direct image address and not the image link below. Also , some images can't be loaded on browsers directly, because of CROSS ORIGIN RESOURCE SHARING policy. So, in rare cases if this happens in your browser, Reload the page. Also if you're viewing this on a mobile device, and have an image you want to use in here, then download that image on your mobile if you not already have it. Afterwards, upload that image on  IMGBB.COM . Than , select HTML FULL INKED option in the embedded codes (you will see it there). Now , after selecting it, you will see an <a> tag (html anchor tag). Inside this <a> tag you will find an <img> tag. At last, copy the url of the image which is the value of the SRC attribute. You now have the direct address of the image which you can paste below and see what this detects. Also do not enter url inside double quotes (\"\"). Only enter clean direct image address/url. Also if you press detect without any url , then also an error will arise . You need to reload the page at that case also. "}
+                {
+                    "Upload image directly from your device , or enter the direct image address (i.e url) in the given box. Then press detect, and wait for this to predict. When entering url than please only enter the direct image address and not the link of the image. If for some reason you can't find the direct image address (mostly when using mobile browsers) , then download the image from the web and upload it here. You can also upload images clicked from your camera over here. It can detect animals, plants, human, insects, places , objects and much more from the entered images. It can even tell you species of the animal uploaded along with it's scientific name."
+                }
             </p>
             <div className="center mt2">
-                <div className="center pa4 br3 shadow-5 smscr ">
-                <input type="text" onChange={typechange} className="f4 pa2 w-70 center" placeholder="enter url" />
-                <button onClick={press} className="center w-30 btnd grow f4 link ph3 pv2 white line bg-light-purple">detect</button>
-                </div>
+                <div className=" pa4 br3 shadow-5 smscr ">
+                <input id='pholder' type="text" value={value} onChange={typechange} className="f4 pa2 w-100 center" placeholder={placeHolder} />
+                <div className='center w-70'>
+                <button onClick={press} className="shadow-1 center w-40 btnd grow f4 link ph3 pv2 white line bg-light-purple">detect</button>
+                <input onChange={imghandle} hidden type="file" id="inp" name="image_upload" accept="image/*"></input>
+              
+                    <label htmlFor="inp" className="imgupload pointer shadow-2 ba b--black center w-40 btnd grow f4 link ph3 pv2 white line bg-light-purple">
+                        {"Upload"}
+                    </label>
                 
+                </div>    
+                </div>
             </div>
+
         </div>
     )
 }

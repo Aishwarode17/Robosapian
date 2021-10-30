@@ -6,7 +6,7 @@ export default function Errorboundary(props) {
     return(
         <div>
         <p className="f3 ba mt4 center pa2" style={{textAlign:'center', overflowY:"scroll", height:"300px"}}>
-            This image can't be loaded duef to CORS error, I Aishwar malviya am really sorry about this. In further update I will resolve this error by adding a proxy server, which is under construction. Therefore, for now use a different image. Also Make sure to enter the image address (direct image address). To do so in desktop, go to image and copy image address. And in mobile phone download the image in your mobile, then upload it on imgbb.com , then select "HTML full inked " option from embedded codes. After that an html {"<a>"} tag (anchor tag) will be shown to you. From that tag copy the url inside the "src" attribute of the inner img tag. Than paste that url above. Make sure your url isn't inside any double quote (""). If this doesn't work than try reloading and using a different image with direct address. 
+            This error is occured either because of Cross-Origin-Resource-Sharing ( a browser security feature ), or because you've pressed detect, without uploading an image or entering a url. If it's because you didn't entered or didn't upload anything, then please reload and try again ( this time upload or enter an image address). In case you entered the correct image address (not the image link), and this error came up, well, CORS is most likely the cause. Now until I add a proxy server (which is under construction) , Please reload and upload that image, from your device, instead of entering it's url. Reload , try again and have fun. Connect with me on github (link's at the top).
         </p>
         </div>
       )

@@ -23,12 +23,30 @@ export default class App extends Component {
       tmp:"",
       pred:[{className:"first"},{className:"second"},{className:"third"}],
       load: false,
-      haserror:false
+      haserror:false,
+      placeholder:"enter url",
+      value:""
     }
   }
 
+  imagehandler = (e)=>{
+    this.setState({placeholder: "Uploading your image, don't press anything"});
+    const reader = new FileReader();
+    console.log("filereader loaded");
+    reader.onload = ()=>{
+    if(reader.readyState === 2){
+      this.setState({tmp:reader.result});
+      this.setState({placeholder:"Press detect , Image's uploaded"});
+      console.log("tmp set ready to go");
+
+    }
+  }
+    reader.readAsDataURL(e.target.files[0]);
+}
+
   typeChange = (event)=>{
     this.setState({tmp:event.target.value});
+    this.setState({value:event.target.value});
   }
 
   press =()=>{
@@ -41,11 +59,11 @@ export default class App extends Component {
                           const predictions = await model.classify(img);                        
                           this.setState({pred: predictions});
                         })();
-                      }      
+                      }
+    this.setState({value:""});
   }
 
   therr = ()=>{
-    // throw console.error("this can't be loaded");;
     this.setState({haserror:true});
   }
 
@@ -57,7 +75,7 @@ export default class App extends Component {
         <Navbar></Navbar>
         <Logo></Logo>
         <Rank></Rank>
-        <Imagelink typechange={this.typeChange} press={this.press}></Imagelink>
+        <Imagelink value={this.state.value} placeHolder={this.state.placeholder} imghandle={this.imagehandler} typechange={this.typeChange} press={this.press}></Imagelink>
         <Errorboundary haserror={this.state.haserror}>
         <img crossOrigin="anonymous" onError={this.therr} id="dt" src={this.state.url}  alt="dtection" className="center imdt mt4"  />
         <Loading make={this.state.load}>

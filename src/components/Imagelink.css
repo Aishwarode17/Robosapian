@@ -17,3 +17,7 @@
         text-align: center;
     }
 }
+
+#pholder::placeholder{
+    color:red;
+}
